@@ -9,6 +9,7 @@ XYBrokenLineWidget::XYBrokenLineWidget(QWidget *parent)
 {
     expendTimesY = 1;
     expendTimesX = 20;
+    offsetY = 0;
     resize(600, 400);
     calculateThread = new XYCalculateThread(this);
     connect(calculateThread, SIGNAL(finished()), this, SLOT(updatePoints()));
